@@ -29,7 +29,7 @@ $(document).ready(function(){
 
     // API REQUEST ONE
     var date = '2017/7';
-    var url = "http://api.nytimes.com/svc/archive/v1/" + date + ".json?api-key=1d9999a0598e4f1f8342f51cab13e017";
+    var url = "https://api.nytimes.com/svc/archive/v1/" + date + ".json?api-key=1d9999a0598e4f1f8342f51cab13e017";
 
     var request = $.ajax({
         dataType: "json",
