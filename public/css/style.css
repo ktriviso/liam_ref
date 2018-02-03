@@ -1,0 +1,148 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 100%;
+    font-family: 'Merriweather', serif;
+    text-transform: uppercase;
+    font-size: 100%;
+    position: relative;
+}
+
+.webticker-init {
+    width: 0!important;
+}
+
+.news-container {
+    position: relative;
+}
+
+.overlay {
+    z-index: 100;
+    position: absolute;
+    margin: auto;
+    bottom: 0;
+    left: 30%;
+}
+
+.overlay img {
+    height:600px;
+}
+
+@keyframes infinite-spinning {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading {
+   width: 100%;
+   height: 100%;
+   top: 0;
+   left: 0;
+   position: fixed;
+   display: block;
+   background-color: white;
+   z-index: 999;
+   text-align: center;
+}
+
+/*https://codepen.io/thetallweeks/pen/yybGra*/
+.loading {
+    position: absolute;
+    top: 55%;
+    left: 40%;
+}
+
+.loading:after {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: bottom;
+  -webkit-animation: ellipsis steps(4,end) 900ms infinite;
+  animation: ellipsis steps(4,end) 900ms infinite;
+  content: "\2026"; /* ascii code for the ellipsis character */
+  width: 0px;
+}
+
+@keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+@-webkit-keyframes ellipsis {
+  to {
+    width: 1.25em;
+  }
+}
+
+#loading-image {
+  position: absolute;
+  top: 25%;
+  left: 40%;
+  z-index: 1000;
+  height: 200px;
+  animation: infinite-spinning  2s infinite;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    /*z index 1 will make it directly behind trump image*/
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.modal::after {
+    height: 10px;
+    width: 10px;
+    left: -10px;
+    bottom: -10px;
+  }
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: white;
+    margin-top: 5%;
+    margin-left: 5%;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.modal-content p,  .modal-content .blink {
+    margin: 23px;
+    text-align: center;
+}
+
+.modal-content .blink {
+    margin-top: 10px;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: -15px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
