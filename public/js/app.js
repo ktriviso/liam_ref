@@ -1,10 +1,4 @@
 $(document).ready(function(){
-
-    function closeLoader() {
-        $('#loading').hide();
-    }
-    setTimeout(closeLoader, 3000);
-
     // modal
     var modal = document.getElementById('myModal');
     var trigger = document.getElementById("modal-trigger");
