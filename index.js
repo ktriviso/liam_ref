@@ -5,7 +5,7 @@ var app = express()
 var path = require('path')
 // fixes the cross origin err
 var cors = require('cors')
-var port = process.env || 3000
+var port = process.env.PORT || 3000
 var Twit = require('twit')
 var config = require('./config.js')
 var Twitter = new Twit(config)
@@ -65,7 +65,7 @@ app.get('/get-trumps-tweets', function(req, res) {
 		});
 });
 
-app.listen(3000, function(){
+app.listen(port, function(){
 	console.log('Im up and running on: ' + 3000)
 
 })
