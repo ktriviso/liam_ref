@@ -7,7 +7,7 @@ html, body {
     font-family: 'Merriweather', serif;
     text-transform: uppercase;
     font-size: 100%;
-    position: relative;
+    /*position: relative;*/
 }
 
 .webticker-init {
@@ -16,6 +16,7 @@ html, body {
 
 .news-container {
     position: relative;
+    padding-top: 30px;
 }
 
 .overlay {
@@ -23,13 +24,14 @@ html, body {
     position: absolute;
     margin: auto;
     bottom: 0;
-    left: 30%;
+    left: 0;
+    padding-left: 100px;
 }
 
 .overlay img {
     height:600px;
 }
-
+/*
 @keyframes infinite-spinning {
   from {
     transform: rotate(0deg);
@@ -51,7 +53,6 @@ html, body {
    text-align: center;
 }
 
-/*https://codepen.io/thetallweeks/pen/yybGra*/
 .loading {
     position: absolute;
     top: 55%;
@@ -64,7 +65,7 @@ html, body {
   vertical-align: bottom;
   -webkit-animation: ellipsis steps(4,end) 900ms infinite;
   animation: ellipsis steps(4,end) 900ms infinite;
-  content: "\2026"; /* ascii code for the ellipsis character */
+  content: "\2026";
   width: 0px;
 }
 
@@ -87,7 +88,7 @@ html, body {
   z-index: 1000;
   height: 200px;
   animation: infinite-spinning  2s infinite;
-}
+}*/
 
 /* The Modal (background) */
 .modal {
